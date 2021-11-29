@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<head>
+  <title>FormuFisic | Aceleración</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--!-----FISICA------->
+  <script src="fisica/aceleracion.js"></script>
+  <script src="fisica/conversion.js"></script>
+  <!-------------------->
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/cufon-yui.js"></script>
+  <script type="text/javascript" src="js/arial.js"></script>
+  <script type="text/javascript" src="js/cuf_run.js"></script>
+  <link rel="icon" type="image/jpg" href="images/icon.png">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
+  </script>
+  </script>
+
+</head>
+
+<body>
+  <div class="main">
+    <div class="clr"></div>
+    <div class="header">
+      <div class="logo">
+        <h1><a><span>FormuFisic</span><small>By MRCL</small></a></h1>
+      </div>
+      <div class="menu_nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html#soporte1">Soporte</a></li>
+          <li><a href="about.html">Comenzar</a></li>
+        </ul>
+        <div class="clr"></div>
+      </div>
+      <div class="clr"></div>
+    </div>
+    <div class="hbg"><img src="images/aceleracion-.jpg" width="770" height="294" alt="" /></div>
+    <div class="content">
+      <div class="mainbar">
+        <div class="article">
+          <h2 id="Titulo_de_aceleracion"><span>Aceleración<span></h2>
+          <div class="clr"></div>
+
+          <p>La aceleración es el nombre que le damos a cualquier proceso en donde la velocidad cambia. Como la
+            velocidad es una
+            rapidez y una dirección, solo hay dos maneras para que aceleres: cambia tu rapidez o cambia tu dirección (o
+            cambia
+            ambas).
+          </p>
+          <div class="clr"></div>
+        </div>
+        <div class="article">
+          <h2><span>Aceleración Basica</span></h2>
+          <div class="clr"></div>
+          <p>
+          <pre>
+                    <code>a = v / t
+          aceleración = velocidad % tiempo
+          aceleración es igual a dividir la velocidad entre el tiempo
+          (Su unidad es en metro sobre segundo al cuadrado (m/s²))
+                    </code>
+                  </pre>
+          Para medir la aceleración necesitamos dos principales datos. La velocidad, y el tiempo, si por ejemplo un
+          carro va a una <b>velocidad</b> de 1.5m/s y su <b>tiempo</b> andando fue de 5s, ¿Cuál seria su aceleración?
+          </p>
+          <table style="width: 80%;">
+            <tr>
+              <th>Datos:</th>
+              <th>Formula:</th>
+              <th>Operación:</th>
+              <th>Resultado:</th>
+            </tr>
+            <tr>
+              <td>v = 1.5m/s</td>
+              <td rowspan="2"> a = v/t</td>
+              <td rowspan="2">a = 1.5m/s % 5s</td>
+              <td rowspan="2">a = 0.3m/s²</td>
+            </tr>
+            <tr>
+              <td>t = 5s</td>
+            </tr>
+          </table>
+          <div class="clr"></div>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="gadget">
+          <h2><span>Menu</span> Principal</h2>
+          <div class="clr"></div>
+          <ul class="sb_menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#fisica">¿Qué es la Física?</a>
+            <li><a href="index.html#pqlohacemos">¿Porqué lo hacemos?</a>
+            <li><a href="about.html#soporte1">Soporte</a>
+            <li><a href="about.html#actualizaciones">Actualizaciones</a>
+          </ul>
+        </div>
+        <div class="gadget">
+          <h2 class="grey"><span>Aceleración</span></h2>
+          <div class="clr"></div>
+          <ul class="ex_ex_menu">
+            <li><button onclick="convertidor();"><a>Convertir</a></button></li>
+            <hr>
+            <li><button onclick="abasica();"><a>Basica</a></button></li>
+            <li><button onclick="aif();"><a>Inicial-Final</a></button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="clr"></div>
+  </div>
+  <div class="clr"></div>
+  <div class="fbg">
+    <div class="clr"></div>
+  </div>
+  </div>
+</body>

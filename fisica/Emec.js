@@ -1,7 +1,7 @@
 function emecbasica() {
   let Ec = parseFloat(prompt("Ingresa la Energía Cinética"));
-  let Ep = parseFloat(prompt("Intresa la Energía Mecánica"));
-  let r = parseInt(Ec) + parseInt(Ep);
+  let Ep = parseFloat(prompt("Ingresa la Energía Potencial"));
+  let r = Ec + Ep;
   swal(
     `ENERGIA MECÁNICA`,
     `Formula:

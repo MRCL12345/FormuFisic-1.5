@@ -4,6 +4,7 @@ function convertidor() {
     `A que propiedad vas a poner para realizar la conversion con su unidad?`,
     {
       buttons: {
+        Potencia: "Potencia",
         cancel: "Cancelar",
         catch: {
           text: "distancia",
@@ -19,6 +20,9 @@ function convertidor() {
         break;
       case "catch":
         convertmetros();
+        break;
+      case "Potencia":
+        converthpw();
         break;
     }
   });
@@ -54,16 +58,17 @@ function km_a_m() {
   swal(`Introduce tus kilometros`, {
     content: "input",
   }).then((value) => {
-    swal(`Tienes: ${parseInt(value) * 1000}m`);
+    swal(`Tienes: ${parseFloatt(value) * 1000}m`);
   });
 }
 function cm_a_m() {
   swal(`Introduce tus centimetros`, {
     content: "input",
   }).then((value) => {
-    swal(`Tienes: ${(parseInt(value) * 1) / 100}m`);
+    swal(`Tienes: ${(parseFloat(value) * 1) / 100}m`);
   });
 }
+
 //!-----------------------------CONVERSIONES A KILO GRAMOS
 //_-----------------------------MENSAJE
 function convertkg() {
@@ -106,4 +111,44 @@ function g_a_kg() {
   });
 }
 
-//--
+//!---------CONVERSIONES DE WATTS Y HP---------
+//-----Mensaje
+function converthpw() {
+  swal("Que quieres convertir?", {
+    buttons: {
+      cancel: "Cancelar",
+      catch: {
+        text: "Watts",
+        value: "catch",
+      },
+      hp: true,
+    },
+  }).then((value) => {
+    switch (value) {
+      case "hp":
+        hp_a_Watts();
+        break;
+
+      case "catch":
+        Watts_a_hp();
+        break;
+
+      default:
+    }
+  });
+}
+//-----Operador
+function Watts_a_hp() {
+  swal("Introduce los Watts", {
+    content: "input",
+  }).then((value) => {
+    swal(`Tienes: ${parseFloat(value) / 745.7}hp`);
+  });
+}
+function hp_a_Watts() {
+  swal(`Introduce los caballos de fuerza`, {
+    content: "input",
+  }).then((value) => {
+    swal(`Tienes: ${parseFloat(value) * 745.7} Watts`);
+  });
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<head>
+  <title>FormuFisic | Potencia</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--!-----FISICA------->
+  <script src="fisica/potencia.js"></script>
+  <script src="fisica/conversion.js"></script>
+  <!-------------------->
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/cufon-yui.js"></script>
+  <script type="text/javascript" src="js/arial.js"></script>
+  <script type="text/javascript" src="js/cuf_run.js"></script>
+  <link rel="icon" type="image/jpg" href="images/icon.png">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
+  </script>
+  </script>
+
+</head>
+
+<body>
+  <div class="main">
+    <div class="clr"></div>
+    <div class="header">
+      <div class="logo">
+        <h1><a><span>FormuFisic</span><small>By MRCL</small></a></h1>
+      </div>
+      <div class="menu_nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="about.html#soporte1">Soporte</a></li>
+          <li><a href="about.html">Comenzar</a></li>
+        </ul>
+        <div class="clr"></div>
+      </div>
+      <div class="clr"></div>
+    </div>
+    <div class="hbg"><img src="images/potencia.jpg" width="580" height="294" alt="" /></div>
+    <div class="content">
+      <div class="mainbar">
+        <div class="article">
+          <h2 id="Titulo_de_aceleracion"><span>Potencia<span></h2>
+          <div class="clr"></div>
+
+          <p>Cuando relacionamos el trabajo mecanico con el tiempo hablamos de potencia.
+            Por ejemplo si se requiere subir agua a un tercer piso a 4m de altura y un motor lo hace en la mitad del
+            tiempo que
+            ocupa otro motor en realizar el mismo trabajo, entonces decimos que el primer motor es mas potente.
+
+          </p>
+          <div class="clr"></div>
+        </div>
+        <div class="article">
+          <h2><span>Potencia Basica</span></h2>
+          <div class="clr"></div>
+          <p>
+          <pre>
+                    <code>P = Tmec. · t
+          Potencia = Trabajo mecánico x tiempo empleado
+          La potencia es igual al trabajo mecanico multiplicado por el tiempo empleado
+          (La potencia se mide en watts y en caballos de fuerza (Watts, Hp)) hp = 745.7Watts, 1 Watts = 1 Joule/s
+                    </code>
+                  </pre>
+          Si por ejemplo tenemos que medir la potencia de una grua que esta cargando un carro y hace un trabajo mecánico
+          de 700J en un tiempo de 40s ¿Cuál será su Potencia en Watts y caballos de fuerza?
+          </p>
+          <table style="width: 80%;">
+            <tr>
+              <th>Datos:</th>
+              <th>Formula:</th>
+              <th>Operación:</th>
+              <th>Resultado:</th>
+            </tr>
+            <tr>
+              <td>Tmec. = 700J</td>
+              <td rowspan="2">P = Tmec. · t</td>
+              <td rowspan="2">P = 700J · 40s</td>
+              <td rowspan="2">P = 2800Watts o 3.75hp</td>
+            </tr>
+            <tr>
+              <td>t = 40s</td>
+            </tr>
+          </table>
+          <div class="clr"></div>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="gadget">
+          <h2><span>Menu</span> Principal</h2>
+          <div class="clr"></div>
+          <ul class="sb_menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#fisica">¿Qué es la Física?</a>
+            <li><a href="index.html#pqlohacemos">¿Porqué lo hacemos?</a>
+            <li><a href="about.html#soporte1">Soporte</a>
+            <li><a href="about.html#actualizaciones">Actualizaciones</a>
+          </ul>
+        </div>
+        <div class="gadget">
+          <h2 class="grey"><span>Potencia</span></h2>
+          <div class="clr"></div>
+          <ul class="ex_ex_menu">
+            <li><button onclick="convertidor();"><a>Convertir</a></button></li>
+            <hr>
+            <li><button onclick="pbasica();"><a>Basica</a></button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="clr"></div>
+  </div>
+  <div class="clr"></div>
+  <div class="fbg">
+    <div class="clr"></div>
+  </div>
+  </div>
+</body>

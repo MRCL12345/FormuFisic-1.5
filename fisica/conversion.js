@@ -11,6 +11,7 @@ function convertidor() {
           value: "catch",
         },
         masa: true,
+        temperatura: "Temperatura",
       },
     }
   ).then((value) => {
@@ -23,6 +24,9 @@ function convertidor() {
         break;
       case "Potencia":
         converthpw();
+        break;
+      case "temperatura":
+        temperatura();
         break;
     }
   });
@@ -58,7 +62,7 @@ function km_a_m() {
   swal(`Introduce tus kilometros`, {
     content: "input",
   }).then((value) => {
-    swal(`Tienes: ${parseFloatt(value) * 1000}m`);
+    swal(`Tienes: ${parseFloat(value) * 1000}m`);
   });
 }
 function cm_a_m() {
@@ -150,5 +154,50 @@ function hp_a_Watts() {
     content: "input",
   }).then((value) => {
     swal(`Tienes: ${parseFloat(value) * 745.7} Watts`);
+  });
+}
+//!-------------------------------CONVERSION DE TEMPERATURA
+//mensaje
+function temperatura() {
+  swal(`Qué unidades de temperatura tienes?`, {
+    buttons: {
+      celsius: "Celsius",
+      fahrenheit: "Fahrenheit",
+      kelvin: "Kelvin",
+    },
+  }).then((value) => {
+    switch (value) {
+      case "celsius":
+        celsius();
+        break;
+      case "fahrenheit":
+        fahrenheit();
+        break;
+      case "kelvin":
+        kelvin();
+        break;
+    }
+  });
+}
+//- operador
+function celsius() {
+  swal(`Introduce tus grados Celsius`, {
+    content: "input",
+  }).then((value) => {
+    swal(
+      `Tienes: 
+      ${(parseFloat(value) * 1, 8) + 32} °F
+      ${parseFloat(value) + 273.15} K`
+    );
+  });
+}
+function fahrenheit() {
+  swal(`Introduce tus grados Fahrenheit`, {
+    content: "input",
+  }).then((value) => {
+    swal(
+      `Tienes:
+      ${(parseFloat(value) / 1, 8) - 32} °C`
+    );
   });
 }

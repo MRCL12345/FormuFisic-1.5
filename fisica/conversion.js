@@ -186,7 +186,7 @@ function celsius() {
   }).then((value) => {
     swal(
       `Tienes: 
-      ${(parseFloat(value) * 1, 8) + 32} °F
+      ${(parseFloat(value) * 9) / 5 + 32} °F
       ${parseFloat(value) + 273.15} K`
     );
   });
@@ -197,7 +197,18 @@ function fahrenheit() {
   }).then((value) => {
     swal(
       `Tienes:
-      ${(parseFloat(value) / 1, 8) - 32} °C`
+      ${parseFloat(value) - 32 * (5 / 9)} °C
+      ${(parseFloat(value) - 32) * (5 / 9) + 273.15} K`
     );
+  });
+}
+function kelvin() {
+  swal(`Introduce tus Kelvin`, {
+    content: "input",
+  }).then((value) => {
+    swal(`
+    Tienes:
+    ${((parseFloat(value) - 273.15) * 9) / 5 + 32} °F
+    ${value - 273.15} °C`);
   });
 }

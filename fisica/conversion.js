@@ -6,11 +6,8 @@ function convertidor() {
       buttons: {
         Potencia: "Potencia",
         cancel: "Cancelar",
-        catch: {
-          text: "distancia",
-          value: "catch",
-        },
-        masa: true,
+        distancia: "Distancia",
+        masa: "Masa",
         temperatura: "Temperatura",
       },
     }
@@ -19,7 +16,7 @@ function convertidor() {
       case "masa":
         convertkg();
         break;
-      case "catch":
+      case "distancia":
         convertmetros();
         break;
       case "Potencia":
@@ -37,11 +34,8 @@ function convertmetros() {
   swal("Que quieres convertir a metros?", {
     buttons: {
       cancel: "Cancelar",
-      catch: {
-        text: "cm",
-        value: "catch",
-      },
-      km: true,
+      cm: "cm",
+      km: "km",
     },
   }).then((value) => {
     switch (value) {
@@ -49,7 +43,7 @@ function convertmetros() {
         km_a_m();
         break;
 
-      case "catch":
+      case "cm":
         cm_a_m();
         break;
 
@@ -79,11 +73,8 @@ function convertkg() {
   swal("Que quieres convertir a kilogramo?", {
     buttons: {
       cancel: "Cancelar",
-      catch: {
-        text: "g",
-        value: "catch",
-      },
-      T: true,
+      g: "g",
+      T: "T",
     },
   }).then((value) => {
     switch (value) {
@@ -91,7 +82,7 @@ function convertkg() {
         T_a_kg();
         break;
 
-      case "catch":
+      case "g":
         g_a_kg();
         break;
 
@@ -121,11 +112,8 @@ function converthpw() {
   swal("Que quieres convertir?", {
     buttons: {
       cancel: "Cancelar",
-      catch: {
-        text: "Watts",
-        value: "catch",
-      },
-      hp: true,
+      watts: "Watts",
+      hp: "hp",
     },
   }).then((value) => {
     switch (value) {
@@ -133,7 +121,7 @@ function converthpw() {
         hp_a_Watts();
         break;
 
-      case "catch":
+      case "watts":
         Watts_a_hp();
         break;
 
@@ -146,7 +134,7 @@ function Watts_a_hp() {
   swal("Introduce los Watts", {
     content: "input",
   }).then((value) => {
-    swal(`Tienes: ${parseFloat(value) / 745.7}hp`);
+    swal(`Tienes: ${parseFloat(value) / 745.7} hp`);
   });
 }
 function hp_a_Watts() {

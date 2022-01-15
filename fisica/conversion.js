@@ -28,7 +28,7 @@ function convertidor() {
     }
   });
 }
-//! CONVERSIONES A METROS
+//!  CONVERSIONES A METROS
 //_-----------------------------MENSAJE
 function convertmetros() {
   swal("Que quieres convertir a metros?", {
